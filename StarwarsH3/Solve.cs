@@ -12,7 +12,7 @@ namespace StarwarsH3
         public void StartsWithM(List<Planet> planets)
         {
             var results = from name in planets
-                          where name.Name.StartsWith("M")
+                          where name.Name.ToLower().StartsWith("m")
                           select name.Name;
 
             foreach (string item in results)
